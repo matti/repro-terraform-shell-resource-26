@@ -2,6 +2,11 @@
 
 set -e
 
+set +e
+  rm -rf .terraform
+  rm -rf terraform.tfstate*
+set -e
+
 terraform init
 terraform apply -auto-approve
 
